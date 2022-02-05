@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app
+web: python project/manage.py migrate && python project/manage.py run_gunicorn 0.0.0.0:8000
