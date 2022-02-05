@@ -58,5 +58,7 @@ docker-compose run web python project/manage.py migrate
 
 ``` bash
 heroku login
-git push heroku master
+git push heroku master # ou configurar o deploy automatico pelo github por branch
+heroku run rake db:migrate
+heroku restart
 ```
