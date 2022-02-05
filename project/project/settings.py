@@ -31,7 +31,6 @@ DEBUG = True if ENVIRONMENT == "development" else False
 
 ALLOWED_HOSTS = ["*"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
