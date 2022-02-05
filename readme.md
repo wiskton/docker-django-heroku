@@ -53,3 +53,10 @@ docker-compose run web python project/manage.py makemigrations
 ``` bash
 docker-compose run web python project/manage.py migrate
 ```
+
+## deploy heroku
+
+``` bash
+heroku login
+git push heroku master
+```
