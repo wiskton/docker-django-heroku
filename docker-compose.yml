@@ -17,7 +17,7 @@ services:
       - 5432
   web:
     build: .
-    command: sh /code/start.sh
+    command: sh /code/scripts/start.sh
     volumes:
       - .:/code
     ports:
