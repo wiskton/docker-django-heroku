@@ -31,6 +31,8 @@ pipenv run pip freeze > django/requirements.txt
 ```
 
 ## Criação do container
+
+Lembrar de configurar os environments locais
     
 ``` bash
 docker-compose up --build
@@ -55,6 +57,8 @@ docker-compose run web python django/manage.py migrate
 ```
 
 ## deploy heroku
+
+Configurar environments no heroku
 
 ``` bash
 heroku login
