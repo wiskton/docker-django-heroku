@@ -21,13 +21,13 @@ pipenv check
 ## Instalando os requirements no env
 
 ``` bash
-pipenv install -r requirements.txt
+pipenv install -r django/requirements.txt
 ```
 
 ## Executa os comandos dentro do pipenv
     
 ``` bash
-pipenv run pip freeze > requirements.txt
+pipenv run pip freeze > django/requirements.txt
 ```
 
 ## Criação do container
@@ -45,13 +45,13 @@ docker-compose up
 ## Criar migrações
     
 ``` bash
-docker-compose run web python manage.py makemigrations
+docker-compose run web python django/manage.py makemigrations
 ```
 
 ## Migrações
 
 ``` bash
-docker-compose run web python manage.py migrate
+docker-compose run web python django/manage.py migrate
 ```
 
 ## deploy heroku
