@@ -9,6 +9,6 @@ RUN mkdir /code
 WORKDIR /code
 COPY . /code
 RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r /code/project/requirements.txt
+RUN pip install --no-cache-dir -r /code/requirements.txt
 
 RUN chmod +x /code/start.sh
