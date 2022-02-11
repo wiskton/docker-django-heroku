@@ -5,22 +5,23 @@ services:
     image: postgres
     volumes:
       - ./data/db:/var/lib/postgresql/data
-    environment:
-      - POSTGRES_NAME=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_PORT=5432
-      - POSTGRES_HOST=localhost
+    env_file: 
+      - environments/postgresql.env
     ports:
       - "5432:5432"
     expose:
       - 5432
   web:
     build: .
-    command: sh /code/scripts/start.sh
+    command: sh /code/start.sh
     volumes:
       - .:/code
     ports:
       - "8000:8000"
     depends_on:
       - db
+    env_file: 
+      - environments/postgresql.env
+      - environments/aws.env
+      - environments/django.env
+      

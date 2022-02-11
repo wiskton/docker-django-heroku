@@ -1,4 +1,4 @@
-# Exemplo Django Multi Tenant
+# Exemplo Blog - (Django, Docker, Heroku, Postgresql)
 
 ## Cria o arquivo pipfile e o ambiente
     
@@ -21,13 +21,13 @@ pipenv check
 ## Instalando os requirements no env
 
 ``` bash
-pipenv install -r requirements.txt
+pipenv install -r project/requirements.txt
 ```
 
 ## Executa os comandos dentro do pipenv
     
 ``` bash
-pipenv run pip freeze > requirements.txt
+pipenv run pip freeze > project/requirements.txt
 ```
 
 ## Criação do container
