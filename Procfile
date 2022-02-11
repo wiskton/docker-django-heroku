@@ -1,1 +1,1 @@
-web: python project/manage.py migrate && python project/manage.py runsever 0.0.0.0:8000
+web: gunicorn config.wsgi --log-file -
